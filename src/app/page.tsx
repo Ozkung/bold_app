@@ -1,6 +1,14 @@
+"use client";
+
 import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 export default function Home() {
+  function handleSignIn() {
+    signIn("apple", { redirectTo: "/success" });
+    // Placeholder for sign-in logic
+    console.log("Sign-in with Apple button clicked");
+  }
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -59,6 +67,12 @@ export default function Home() {
             Documentation
           </a>
         </div>
+        <button
+          onClick={handleSignIn}
+          className="bg-black text-white border rounded-lg p-2 cursor-pointer"
+        >
+          <div>Sign-in with Apple</div>
+        </button>
       </main>
     </div>
   );
