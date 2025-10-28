@@ -5,7 +5,7 @@ import { signIn } from "next-auth/react";
 
 export default function Home() {
   function handleSignIn() {
-    signIn("apple", { redirectTo: "/success" });
+    signIn("apple", { redirectTo: "/" });
     // Placeholder for sign-in logic
     console.log("Sign-in with Apple button clicked");
   }
