@@ -12,13 +12,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log("--------------------------------");
+      console.log("---------------1-----------------");
       console.log("account :", account);
-      console.log("--------------------------------");
+      console.log("---------------2----------------");
       console.log("profile", profile);
-      console.log("--------------------------------");
+      console.log("----------------3----------------");
       console.log("user", user);
-      console.log("--------------------------------");
+      console.log("----------------4----------------");
       return true;
     },
   },
